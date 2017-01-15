@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Korail Macro",
+  "description": "SRT 자동 예약 매크로",
+  "version": "1.2.2",
+  "permissions": [
+    "https://etk.srail.co.kr/"
+  ],
+  "content_scripts": [ {
+    "all_frames": true,
+    "js": ["jquery-1.11.0.min.js", "content.js"],
+    "matches": ["https://etk.srail.co.kr/*"],
+    "run_at": "document_end"
+  }],
+  "background": {
+    "page": "background.html"
+  },
+  "web_accessible_resources": [
+    "inject.js", "btn_start.png", "btn_stop.png", "tada.mp3"
+  ]
+}
